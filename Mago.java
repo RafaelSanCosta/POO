@@ -2,16 +2,17 @@ public class Mago extends Personagem{
     String magia;
 
     public Mago(String nome, int saude, int nivel, String magia){
-        this.nome = nome;
-        this.saude = saude;
-        this.nivel = nivel;
+        super(nome, saude, nivel);
         this.magia = magia;
     }
 
-    public Mago(){}
+    public Mago(){
+        super();
+    }
 
     public void mostrarInfo(){
-        System.out.println("Nome: " + nome + ", Nível: " + nivel + ", Saúde: " + saude + ", Magia: " + magia);
+        super.mostrarInfo();
+        System.out.print("Magia: " + magia);
     }
     
 }
